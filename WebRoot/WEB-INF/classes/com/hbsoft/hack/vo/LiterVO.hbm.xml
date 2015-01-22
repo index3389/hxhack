@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hbsoft.hack.vo">
+	<class name="LiterVO" table="liter">
+		<id name="literid">
+			<generator class="native"/>
+		</id>
+		<property name="title"/>
+		<property name="adminName"  column="adminName"/>	
+		<property name="content"/>
+		
+		<property name="isnew"/>
+		<property name="ishot"/>	
+		<property name="type"/>
+		<property name="createTime"/>
+	
+	</class>
+</hibernate-mapping>

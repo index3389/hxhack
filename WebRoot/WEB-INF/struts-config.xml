@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  
+  
+  <form-beans>
+  	<form-bean name="loginForm" type="com.hbsoft.hack.form.HackuserForm" />
+  	<form-bean name="downloadForm" type="com.hbsoft.hack.form.DownloadForm" />
+  	<form-bean name="donghuaForm" type="com.hbsoft.hack.form.DonghuaForm" />
+  	<form-bean name="bbsForm" type="com.hbsoft.hack.form.InvitationForm" />
+  	<form-bean name="lapForm" type="com.hbsoft.hack.form.LapForm" />
+  	<form-bean name="imgForm" type="com.hbsoft.hack.form.UserImgForm" />
+  	
+  	<form-bean name="adminForm" type="org.apache.struts.action.DynaActionForm">
+  		<form-property name="title" type="java.lang.String"></form-property>
+  		<form-property name="author" type="java.lang.String"></form-property>
+  		<form-property name="infoContent" type="java.lang.String"></form-property>	
+  		<form-property name="hot" type="java.lang.String"></form-property>
+  		<form-property name="pick" type="java.lang.String"></form-property>
+  		<form-property name="type1" type="java.lang.String"></form-property>
+  		<form-property name="type2" type="java.lang.String"></form-property>
+  	</form-bean>
+  	
+  	<form-bean name="topicForm" type="org.apache.struts.action.DynaActionForm">
+  		<form-property name="title" type="java.lang.String"></form-property>
+  		<form-property name="author" type="java.lang.String"></form-property>
+  		<form-property name="infoContent" type="java.lang.String"></form-property>	
+  		<form-property name="hot" type="java.lang.String"></form-property>
+  		<form-property name="pick" type="java.lang.String"></form-property>
+  		<form-property name="tid" type="java.lang.Integer"></form-property>
+  	</form-bean>
+  	
+  	<form-bean name="teditForm" type="org.apache.struts.action.DynaActionForm">
+  		<form-property name="tid" type="java.lang.Integer"></form-property>
+  		<form-property name="title" type="java.lang.String"></form-property>
+  		<form-property name="pick" type="java.lang.Integer"></form-property>
+  		<form-property name="infoContent" type="java.lang.String"></form-property>	
+  		<form-property name="author" type="java.lang.String"></form-property>
+  	</form-bean>
+  	
+  	<form-bean name="deditForm" type="org.apache.struts.action.DynaActionForm">
+  		<form-property name="did" type="java.lang.Integer"></form-property>
+  		<form-property name="title" type="java.lang.String"></form-property>
+  		<form-property name="formFile" type="org.apache.struts.upload.FormFile"></form-property>
+  		<form-property name="infoContent" type="java.lang.String"></form-property>	
+  		<form-property name="updateTime" type="java.util.Date"></form-property>
+  		<form-property name="language" type="java.lang.String"></form-property>
+  		<form-property name="downpass" type="java.lang.String"></form-property>
+  	</form-bean>
+  	
+  </form-beans>
+  
+  <global-exceptions />
+  <global-forwards />
+  
+  
+  
+  <action-mappings>
+  	<action path="/user" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="loginForm" parameter="method" scope="request">
+			<forward name="ok" path="bbs.do?method=bbs" redirect="true"></forward>
+			<forward name="fail" path="/bbs/user/passfail.jsp"/>
+			<forward name="saveOK" path="/bbs/user/regOK.jsp"></forward>
+			<forward name="saveFail" path="/bbs/user/regFail.jsp"/>
+			<forward name="isreg" path="/bbs/user/regFail.jsp"/>			
+			<forward name="backFail" path="/bbs/user/infofail.jsp"/>
+			<forward name="backOK" path="/bbs/user/repassword.jsp"/>
+			<forward name="passOK" path="/bbs/user/passOK.jsp"/>
+			<forward name="userLeft" path="/center/userLeft.jsp"/>
+			<forward name="user2" path="/center/user2.jsp"/>
+			<forward name="only_mail" path="/center/onlymail.jsp"/>
+			<forward name="getuser" path="/center/info.jsp"/>
+			<forward name="img" path="/center/userimg.jsp"/>
+			<forward name="del" path="/user.do?method=all_tie"/>
+			<forward name="all_tie" path="/admin/bbs/bbsadmin.jsp"/>
+			
+			
+		</action>
+		
+		<action path="/topic" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="loginForm" parameter="method" scope="request">
+			<forward name="ok" path="/bbs/mainbbs.jsp"></forward>
+			<forward name="fail" path="/bbs/user/passfail.jsp"/>
+			<forward name="topic" path="/show.jsp"/>
+			<forward name="essay" path="/essay.jsp"/>
+			<forward name="essay1" path="/topic/content.jsp"/>
+			<forward name="essay2" path="/topic/technology.jsp"/>
+			<forward name="essay3" path="/topic/liter.jsp"/>
+			<forward name="essay4" path="/download.jsp"/>
+			<forward name="essay5" path="/topic/donghua.jsp"/>	
+			<forward name="essay6" path="/topic/cartoon.jsp"/>
+			<forward name="news" path="/topic/news.jsp"/>
+			<forward name="safe" path="/topic/safety.jsp"/>
+			<forward name="download" path="/topic/attact.jsp"/>	
+			<forward name="find1" path="/topic/find_topic.jsp"/>
+			<forward name="find2" path="/topic/find_download.jsp"/>
+			<forward name="find3" path="/topic/find_cartoon.jsp"/>	
+			
+			<forward name="right1" path="/util/topicRight.jsp"/>	
+			<forward name="right6" path="/util/rightw.jsp"/>	
+			<forward name="right" path="/util/right.jsp"/>	
+			<forward name="right2" path="/util/downloadRight.jsp"/>		
+			<forward name="right3" path="/util/cartoonRight.jsp"/>		
+			<forward name="right4" path="/util/literRight.jsp"/>
+			<forward name="right5" path="/util/newsRight.jsp"/>	
+			<forward name="right7" path="/util/righta.jsp"/>
+			
+			<forward name="index" path="/main.jsp"/>
+			<forward name="del_topic" path="/admin/edit/path.jsp"/>
+		</action>
+		
+		
+		<action path="/admin" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="adminForm" parameter="method" scope="request">
+			<forward name="addOK" path="/admin/edit/addOK.jsp" />
+			<forward name="fail" path="/admin/edit/fail.jsp"/>
+			
+			<forward name="admin_1" path="/admin/edit/topicManager.jsp"/>
+			<forward name="admin_2" path="/admin/edit/downloadManager.jsp"/>
+			<forward name="admin_3" path="/admin/edit/cartoonManager.jsp"/>
+			
+			<forward name="adminOK" path="/admin/admin.jsp"  redirect="true"/>
+			<forward name="adminFail" path="/admin/edit/fail.jsp"/>	
+			<forward name="backup" path="/admin/DB/backup_ok.jsp"/>
+			
+			
+			<forward name="restore" path="/admin/DB/restore_ok.jsp"/>
+			<forward name="next" path="/admin/DB/begin2.jsp"/>
+			<forward name="kill" path="/admin/DB/begin3.jsp"/>
+			<forward name="restore_f" path="/admin/DB/restore_fail.jsp"/>
+			
+			<forward name="user" path="/admin/manager/userManager.jsp"/>
+			
+			
+					
+		</action>
+		
+		<action path="/download" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="downloadForm" parameter="method" scope="request">
+			<forward name="addOK" path="/admin/edit/addOK.jsp" />
+			<forward name="fail" path="/admin/edit/fail.jsp"/>			
+		</action>
+		
+		<action path="/tedit" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="teditForm" parameter="method" scope="request">
+			<forward name="topicvo" path="/admin/edit/edit_topic.jsp" />	
+			<forward name="downvo" path="/admin/edit/edit_download.jsp" />	
+			<forward name="ok" path="/admin/admin.jsp" />		
+		</action>
+		
+		<action path="/dedit" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="downloadForm" parameter="method" scope="request">
+			<forward name="download" path="/admin/admin.jsp" />		
+		</action>
+		
+		<action path="/cedit" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="donghuaForm" parameter="method" scope="request">
+			<forward name="topic" path="/admin/edit/addOK.jsp" />		
+		</action>
+		
+		<action path="/cartoon" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="donghuaForm" parameter="method" scope="request">
+			<forward name="addOK" path="/admin/edit/addOK.jsp" />
+			<forward name="fail" path="/admin/edit/fail.jsp"/>			
+		</action>
+		
+		<action path="/lap" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="lapForm" parameter="method" scope="request">
+			<forward name="add_lap" path="/bbs.do?method=add_lap" redirect="true"/>
+			<forward name="get_lap" path="/admin/bbs/lap_edit.jsp"/>			
+		</action>
+		
+		<action path="/bbs" type="org.springframework.web.struts.DelegatingActionProxy"
+				name="bbsForm" parameter="method" scope="request">
+			<forward name="fail" path="/bbs/error/user_error.jsp" />
+			<forward name="ok" path="/bbs/invitation/user_ok.jsp"/>	
+			<forward name="no_user" path="/bbs/error/user_error.jsp"/>
+			<forward name="tie" path="/bbs/inviList.jsp"/>
+			<forward name="tie2" path="/bbs/inviList2.jsp"/>	
+			<forward name="bbs" path="/bbs/mainbbs.jsp"/>		
+			<forward name="invitation" path="/bbs/show_invitation.jsp"/>	
+			<forward name="restore" path="/bbs/invitation/user_noe.jsp"/>
+			<forward name="res" path="/bbs/bbssearch.jsp"/>	
+			<forward name="best" path="/bbs/best.jsp"/>	
+			<forward name="byname" path="/center/myTopic.jsp"/>
+			<forward name="add_lap" path="/admin/bbs/lap.jsp"/>
+			<forward name="keyword" path="/center/keyword.jsp"/>
+			<forward name="lap" path="/bbs/invitation/invitation.jsp"/>
+			
+		</action>
+		
+		<action path="/init" type="org.springframework.web.struts.DelegatingActionProxy" name="donghuaForm"  parameter="method" scope="request">
+			<forward name="b_ok" path="/admin/edit/addOK.jsp" />
+			<forward name="s_ok" path="/index.jsp"/>
+			<forward name="key" path="/admin/admin.jsp"/>
+			
+			<forward name="add_admin" path="/admin/admin.jsp"/>
+			<forward name="update_pass_admin" path="/admin/admin.jsp"/>
+				
+			<forward name="bbs_basic" path="/admin/bbs/bbs_basic.jsp"/>			
+		</action>
+		
+		<action path="/setup" type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+			<forward name="all" path="/admin/admin.jsp" />	
+			<forward name="page" path="/admin/admin.jsp" />				
+		</action>
+		
+		<action path="/fen" type="org.springframework.web.struts.DelegatingActionProxy"  parameter="method" scope="request">
+			<forward name="fen" path="/topic/common.jsp" />					
+		</action>
+		
+		<action path="/img" type="org.springframework.web.struts.DelegatingActionProxy" name="imgForm"  parameter="method" scope="request">
+			<forward name="img" path="/center/userimg.jsp" />					
+		</action>
+		
+  </action-mappings>
+  
+
+  <message-resources parameter="" />
+</struts-config>

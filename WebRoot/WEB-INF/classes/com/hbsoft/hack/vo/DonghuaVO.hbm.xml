@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hbsoft.hack.vo">
+	<class name="DonghuaVO" table="cartoon">
+		<id name="donghuaid" column="cartoonid">
+			<generator class="native"/>
+		</id>
+		<property name="title"/>
+		<property name="adminName" column="adminName"/>	
+		<property name="content"/>
+		
+		<property name="downsize"/>
+		<property name="downpass"/>
+		<property name="downcount"/>	
+		<property name="type"/>
+		<property name="createTime"/>
+		<property name="huan"/>
+		<property name="language"/>
+		<property name="downName"/>
+	
+	</class>
+</hibernate-mapping>

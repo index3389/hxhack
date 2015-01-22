@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hbsoft.hack.vo">
+	<class name="HackuserVO" table="hackuser">
+		<id name="userId">
+			<generator class="native"/>
+		</id>
+		<property name="hackName"/>
+		<property name="hackPass"/>
+		
+		<property name="hackMail"/>
+		<property name="createTime"/>
+		<property name="integral"/>
+		<property name="question"/>
+		<property name="answer"/>
+		
+		<property name="hackip"/>
+		<property name="hackimg"/>
+		<property name="fatiecount"/>
+		<property name="huitiecount"/>
+	
+	</class>
+</hibernate-mapping>

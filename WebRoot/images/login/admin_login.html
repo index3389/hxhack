@@ -1,0 +1,123 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; chaRset=gb2312">
+<title>管理员登陆</title> 
+<link rel="stylesheet" href="admin_style_4.css" type="text/css" media="all" />
+<style type="text/css">
+<!--
+body {
+	/*background-color: #3669A0;
+	background-image: url(images/newasp_admin_bg.gif);*/
+	margin-left: 0px;
+	margin-top: 100px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.STYLE1 {color: #42bfbf}
+body,td,th {
+	font-size: 12px;
+	background-image: url(e9e3b938a40dc6d7d4622524.jpg);
+}
+.logininput{border:1px solid #7E94C7;background:#C0F8CA;}
+.mainTableborder {
+	border: 2px #fff solid ; 
+	width: 600px;
+}
+-->
+</style>
+</head>
+<script language="javascript">
+<!--//
+function SetFocus(){
+if (document.myform.AdminName.value=="")
+	document.myform.AdminName.focus();
+else
+	document.myform.AdminName.select();
+}
+function CheckForm(){
+	if(document.myform.AdminName.value=="")
+	{
+		alert("请输入您的用户名！");
+		document.myform.AdminName.focus();
+		return false;
+	}
+	if(document.myform.PassWord.value == "")
+	{
+		alert("请输入您的密码！");
+		document.myform.PassWord.focus();
+		return false;
+	}
+	if (document.myform.verifycode.value==""){
+       alert ("请输入您的验证码！");
+       document.myform.verifycode.focus();
+       return false;
+    }
+}
+function CheckBrowser()
+{
+  var app=navigator.appName;
+  var verStr=navigator.appVersion;
+  if (app.indexOf('Netscape') != -1) {
+    alert("黑客软件园友情提示：\n    你使用的是Netscape浏览器，可能会导致无法使用后台的部分功能。建议您使用 IE6.0 或以上版本。");
+  }
+  else if (app.indexOf('Microsoft') != -1) {
+    if (verStr.indexOf("MSIE 3.0")!=-1 || verStr.indexOf("MSIE 4.0") != -1 || verStr.indexOf("MSIE 5.0") != -1 || verStr.indexOf("MSIE 5.1") != -1)
+      alert("黑客软件园友情提示：\n    您的浏览器版本太低，可能会导致无法使用后台的部分功能。建议您使用 IE6.0 或以上版本。");
+  }
+}
+//-->
+</script>
+<body>
+<div align="center">
+<form id="myform" name="myform" method="post" action="?action=login" target="_top" onSubmit="return CheckForm();">
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mainTableborder">
+  <tr>
+    <td colspan="4" height="72"><a href="http://www.3389hack.com" target="_blank"><img alt="黑客软件园管理系统 www.3389hack.com" src="newasp_admin2_r1_c1.jpg" border="0" width="600" height="72" /></a></td>
+  </tr>
+  <tr>
+    <td width="223"><img src="newasp_admin2_r2_c1.jpg" width="223" height="204" /></td>
+    <td width="102" valign="bottom" background="newasp_admin2_r2_c2.jpg"><a href="http://www.3389hack.com" target="_blank"><img src="logo1.gif" alt="黑客软件园" width="88" height="31" border="0" /></a></td>
+    <td width="245" background="newasp_admin2_r2_c3.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+      <tr>
+        <td><span class="STYLE1">用户名称：
+              <input name="AdminName" type="text" class="logininput" id="AdminName" size="22" value="" onFocus="this.select();" />
+              </span>
+          </td>
+      </tr>
+      <tr>
+        <td><span class="STYLE1">用户密码：
+          <input name="PassWord" type="password" class="logininput" id="PassWord" size="22" value="" onFocus="this.select();" />
+        </span></td>
+      </tr>
+	  
+      <tr>
+        <td><span class="STYLE1">验 证 码：
+          <input name="verifycode" type="text" class="logininput" id="verifycode" size="10" maxlength="5" onFocus="this.select();" />
+		  &nbsp;<img src="../inc/getcode.asp" alt="验证码,看不清楚?请点击刷新验证码" height="10" style="cursor : pointer;" onClick="this.src='../inc/getcode.asp?t='+(new Date().getTime());NoCheckCode.src='../NoCheckCode.asp'" /></span></td>
+      </tr>
+      <tr>
+        <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
+          <input name="submit" type="image" src="admin_submit.gif" />
+           <a href="../"><img alt="返回首页" src="admin_home.gif" border="0" width="80" height="24" /></a>
+        </label></td>
+      </tr>
+    </table></td>
+    <td width="30"><img src="/newasp_admin2_r2_c4.jpg" width="30" height="204" /></td>
+  </tr>
+  <tr>
+    <td colspan="4" height="44"><a href="http://www.3389hack.com" target="_blank"><img alt="Newasp CMS" src="newasp_admin2_r3_c1.jpg" border="0" width="600" height="44" /></a></td>
+  </tr>
+</table>
+</form>
+<script language="JavaScript">
+<!--
+CheckBrowser();
+SetFocus();
+-->
+</script>
+
+</div>
+
+</body>
+</html>

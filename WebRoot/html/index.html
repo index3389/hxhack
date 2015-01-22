@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>无标题文档</title>
+
+	<link type="text/css" rel="stylesheet" href="resources/css/ext-all.css" />
+    <script type="text/javascript" src="adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="ext-all.js"></script>
+    <script type="text/javascript">
+		var myform;
+		Ext.onReady(function(){
+		  Ext.QuickTips.init();
+		  myform=new Ext.FormPanel(
+		  {
+			 frame:true,
+			 width:620,
+			 height:220,
+			 layout:"form",
+			 labelAlign:"top",//items中的标签的位置
+			 renderTo:'s',
+			 items:[{
+				  xtype:"htmleditor",
+				  autoHeight:true,
+				  autoWidth :true,
+				  id:"he"
+			  }]
+		  });
+		});
+	
+	</script>
+    <script type="text/javascript">
+		function test()
+		{
+			var s = document.getElementById('he');
+			s.scrollTop = s.scrollHeight;
+			alert(Ext.getCmp('he').getValue());
+		}
+	</script>
+    <style type="text/css">
+		#s
+		{
+			position:absolute;
+			left:200px;
+			top:200px;
+		}
+	</style>
+
+</head>
+
+<body>
+<div id="s"></div>
+<br /><br />
+<button onclick="test()">admin</button>
+</body>
+</html>

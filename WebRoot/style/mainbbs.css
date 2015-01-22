@@ -1,0 +1,242 @@
+@CHARSET "UTF-8";
+
+body
+{
+	text-align:center;
+	margin:0px;
+	background-image:url(images/bbs/bodybg.jpg);
+	padding:0px;
+	cursor:auto;
+	font-family: Arial, Helvetica, Verdana, Sans-serif;
+	font-size:13px;
+}
+a
+{
+	text-decoration:none;
+}
+a:hover
+{
+	color:#FF0000;
+}
+#top
+{
+	height:24px;
+	font-family:黑体;
+	width:919px;
+	padding-top:6px;
+	background-image:url(images/bbs/mainbg.jpg);
+}
+#getdate
+{
+	padding-left:200px;
+}
+#ban
+{
+	text-align:center;
+}
+#nave
+{
+	text-align:left;
+	height:31px;
+	margin:0px;
+	padding:0px;
+	width:920px;
+	background-image:url(images/bbs/mainbg.jpg);
+	
+}
+#nave a
+{
+	display:block;
+	font-family:黑体;
+	height:25px;
+	padding-top:5px;
+	padding-left:14px;
+	padding-right:30px;
+	background-image:url(images/bbs/mainbg.jpg);
+	float:left;
+}
+#nave a:hover
+{
+	display:block;
+	font-family:黑体;
+	float:left;
+	background-image:url(images/bbs/abg.jpg);
+}
+#fa
+{
+	height:40px;
+	width:920px;
+	border-bottom:1px double;
+	border-top:1px double;
+	border-left:1px double;
+	border-right:1px double;
+	background-image:url(images/bbs/mainbg.jpg);
+	text-align:left;
+}
+#fa_yi
+{
+	float:left;
+	padding-top:5px;
+	padding-left:20px;
+}
+#fa_er
+{
+	font-size:14px;
+	padding-top:12px;
+	font-family:黑体;
+	display:block;
+	float:right;
+	padding-right:144px;
+}
+#post
+{
+	width:920px;
+	height:12px;
+	margin:0px;
+	padding:1px;
+	border-left:1px groove #999999;
+	border-right:1px groove #999999;
+}
+.p
+{
+	height:17px;
+	font-family:黑体;
+	color:#33CC00;
+}
+#pyi
+{
+	height:17px;
+	font-family:黑体;
+	color:#33CC00;
+	font-size:30px;
+	margin-right:20px;
+	float:left;
+}
+#per
+{
+	height:17px;
+	font-family:黑体;
+	color:#33CC00;
+	float:left;
+}
+#invitation
+{
+	width:920px;
+	height:252px;
+	padding:0px;
+	border:1px double #999999;
+}
+#invi_left
+{
+	width:300px;
+	height:250px;
+	border-right:1px double #000000;
+	border-bottom:1px double #000000;
+	float:left;
+}
+#invi_right
+{
+	width:300px;
+	height:250px;
+	float:left;
+	border-bottom:1px double #000000;
+}
+#invi_center
+{
+	width:300px;
+	height:250px;
+	float:left;
+	border-bottom:1px double #000000;
+	border-right:1px double #000000;
+}
+.invi_yi
+{
+	width:305px;
+	text-align:left;
+}
+#newhelp
+{
+	width:920px;
+	height:auto;
+	background-color:#CCCCCC;
+}
+#jishu
+{
+	margin-top:2px;
+	width:920px;
+	height:auto;
+	background-color:#CCCCCC;
+}
+.l_shou
+{
+	float:left;
+	font-family:黑体;
+	font-size:20px;
+}
+#sion
+{
+	float:left;;
+}
+.n_1
+{
+	text-align:center;
+	float:left;
+}
+#n_2
+{
+	text-align:left;
+	float:left;
+	padding-top:7px;
+	margin-left:7px;
+}
+#n_3
+{
+	text-align:left;
+	float:left;
+	padding-top:7px;
+	margin-left:7px;
+}
+#t_7
+{
+	text-align:center;
+	width:920px;
+}
+#about
+{
+	margin-top:8px;
+	width:920px;
+	height:auto;
+	background-color:#CCCCCC;
+}
+.invi_11
+{
+	width:300px;
+	margin:0px;
+}
+.invi_22
+{
+	float:left;
+	width:243px;
+	text-align:left;
+	border-bottom:1px dashed blue;
+	font-size:13px;
+	height:25px;
+	padding-top:2px;
+}
+.invi_22 a
+{
+	font-size:15px;
+	font-family:黑体;
+	padding-bottom:2px;
+}
+.invi_23
+{
+	float:right;
+	width:43px;
+	border-bottom:1px dashed blue;
+	font-size:15px;
+	font-family:黑体;
+	padding-bottom:2px;
+	height:25px;
+	padding-top:2px;
+}

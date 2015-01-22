@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+      
+      	     
+
+	<bean name="/user" class="com.hbsoft.hack.action.UserAction" scope="prototype">
+		<property name="userManager" ref="userManager"/>
+	</bean>
+	
+	<bean name="/img" class="com.hbsoft.hack.action.UserImgAction" scope="prototype">
+		<property name="userManager" ref="userManager"/>
+	</bean>
+	
+	<bean name="/topic" class="com.hbsoft.hack.action.TopicAction" scope="prototype">
+		<property name="topicManager" ref="topicManager"/>
+		<property name="bbs" ref="bbsManager"/>
+	</bean>
+	
+	<bean name="/admin" class="com.hbsoft.hack.action.AdminAction" scope="prototype">
+		<property name="adminManager" ref="adminManager"/>
+		<property name="initManager" ref="initManager"/>
+		<property name="userManager" ref="userManager"/>
+	</bean>
+	
+	<bean name="/tedit" class="com.hbsoft.hack.action.TopicEditAction" scope="prototype">
+		<property name="adminManager" ref="adminManager"/>
+	</bean>
+	
+	<bean name="/dedit" class="com.hbsoft.hack.action.DownloadEditAction" scope="prototype">
+		<property name="adminManager" ref="adminManager"/>
+	</bean>
+	
+	<bean name="/cedit" class="com.hbsoft.hack.action.CartoonEditAction" scope="prototype">
+		<property name="adminManager" ref="adminManager"/>
+	</bean>
+	
+	<bean name="/lap" class="com.hbsoft.hack.action.LapAction" scope="prototype">
+		<property name="initManager" ref="initManager"/>
+	</bean>
+	
+	<bean name="/download" class="com.hbsoft.hack.action.DownloadAction" scope="prototype">
+		<property name="adminManager" ref="adminManager"/>
+	</bean>
+	
+	<bean name="/cartoon" class="com.hbsoft.hack.action.CartoonAction" scope="prototype">
+		<property name="adminManager" ref="adminManager"/>
+	</bean>
+	
+	<bean name="/init" class="com.hbsoft.hack.action.InitAction" scope="prototype">
+		<property name="initManager" ref="initManager"/>
+	</bean>
+	
+	<bean name="/fen" class="com.hbsoft.hack.action.FenyeAction" scope="prototype">
+		<property name="topicManager" ref="topicManager"/>
+	</bean>
+	
+	<bean name="/setup" class="com.hbsoft.hack.action.SetupAction" scope="prototype">
+	</bean>
+	
+	<bean name="/bbs" class="com.hbsoft.hack.action.BBSAction" scope="prototype">
+		<property name="bbs" ref="bbsManager"/>
+		<property name="userManager" ref="userManager"/>
+		<property name="initManager" ref="initManager"/>
+	</bean>
+
+</beans>

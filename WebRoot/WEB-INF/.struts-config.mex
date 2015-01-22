@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/user.do" location="50,50" dimension="358,84" />
+  <StrutsActivity path="/user/regOK.jsp" location="650,250" dimension="130,48" />
+  <StrutsActivity path="/bbs/passfail.jsp" location="950,150" dimension="142,48" />
+  <StrutsActivity path="/user/regFail.jsp" location="50,350" dimension="142,48" />
+  <StrutsActivity path="/bbs/mainbbs.jsp" location="50,250" dimension="136,48" />
+  <StrutsActivity path="/myex.jsp" location="350,250" dimension="94,48" />
+  <StrutsActivity path="/user/isreg.jsp" location="950,250" dimension="130,48" />
+  <StrutsActivity path="/success.jsp" location="650,50" dimension="112,48" />
+  <StrutsActivity path="/.jsp" location="950,50" dimension="70,48" />
+  <StrutsActivity path="/" location="650,150" dimension="46,48" />
+  <StrutsActivity path="/bbs/user/passfail.jsp" location="350,350" dimension="172,48" />
+  <StrutsActivity path="/bbs/user/regOK.jsp" location="650,350" dimension="154,48" />
+  <StrutsActivity path="/bbs/user/regFail.jsp" location="950,350" dimension="166,48" />
+  <StrutsActivity path="/bbs/user/isreg.jsp" location="50,450" dimension="154,48" />
+  <StrutsTransition id="/user.do,saveFail,/bbs/user/regFail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="408,113" />
+      <AbsolutePoint location="1107,113" />
+      <AbsolutePoint location="1107,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,zhujian,/myex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,saveOK,/bbs/user/regOK.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="408,83" />
+      <AbsolutePoint location="597,83" />
+      <AbsolutePoint location="597,374" />
+      <AbsolutePoint location="650,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,fail,/bbs/passfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="408,113" />
+      <AbsolutePoint location="1035,113" />
+      <AbsolutePoint location="1035,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,fail,/bbs/user/passfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="259,134" />
+      <AbsolutePoint location="259,374" />
+      <AbsolutePoint location="350,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,saveOK,/user/regOK.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,ok,/bbs/mainbbs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="171,134" />
+      <AbsolutePoint location="171,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,isreg,/bbs/user/isreg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,134" />
+      <AbsolutePoint location="229,474" />
+      <AbsolutePoint location="204,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,saveFail,/user/regFail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,isreg,/user/isreg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
